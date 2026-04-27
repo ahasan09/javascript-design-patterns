@@ -1,5 +1,5 @@
 import express from 'express';
-import modulePattern from './structural-patterns/module-pattern';
+import modulePattern from './structural-patterns/module-pattern.js';
 
 const app = express();
 const PORT = 3000;
