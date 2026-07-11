@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: ES module syntax check
+        run: |
+          set -e
+          find . -name '*.js' -not -path './node_modules/*' -not -path './.git/*' -print0 |
+            while IFS= read -r -d '' f; do
+              echo "checking $f"
+              node --input-type=module --check < "$f"
+            done
