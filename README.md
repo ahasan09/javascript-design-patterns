@@ -1,6 +1,6 @@
 # JavaScript Design Patterns
 
-Implementations of classic Gang of Four (GoF) design patterns in TypeScript/JavaScript, organized by category.
+Implementations of classic design patterns in modern JavaScript (ES modules), organized by category.
 
 ## Patterns Covered
 
@@ -8,27 +8,27 @@ Implementations of classic Gang of Four (GoF) design patterns in TypeScript/Java
 
 > Deal with object creation mechanisms.
 
-- **Factory Method** — create objects without specifying the exact class
-- **Singleton** — ensure only one instance of a class exists
-- **Builder** — construct complex objects step by step
-- **Prototype** — clone existing objects
+- **Constructor** — `creational-patterns/constructor-pattern.js`
+- **Class Design** — `creational-patterns/class-design-pattern.js`
+- **Factory** — `creational-patterns/factory-pattern.js`
+- **Abstract Factory** — `creational-patterns/abstract-factory-pattern.js`
+- **Singleton** — `creational-patterns/singleton-pattern.js`
 
 ### Structural Patterns
 
 > Deal with object composition and relationships.
 
-- **Adapter** — make incompatible interfaces work together
-- **Decorator** — add behavior to objects dynamically
-- **Facade** — provide a simplified interface to a complex system
-- **Proxy** — control access to another object
+- **Module** — `structural-patterns/module-pattern.js`
+- **Mixin** — `structural-patterns/mixin-pattern.js`
+- **Other patterns** — `structural-patterns/other-patterns.js`
 
 ## Tech Stack
 
-- TypeScript / JavaScript (Node.js)
+- JavaScript (Node.js, ES modules)
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v14+
+- [Node.js](https://nodejs.org/) v18+
 
 ## Getting Started
 
@@ -41,12 +41,12 @@ npm install
 ## Running Examples
 
 ```bash
-# Run the main entry point (demonstrates all patterns)
+# Run the entry point
 node index.js
 
-# Or run a specific pattern
-node creational-patterns/singleton/index.js
-node structural-patterns/adapter/index.js
+# Or run a specific pattern file directly
+node creational-patterns/singleton-pattern.js
+node structural-patterns/mixin-pattern.js
 ```
 
 ## Project Structure
@@ -54,14 +54,14 @@ node structural-patterns/adapter/index.js
 ```
 javascript-design-patterns/
 ├── creational-patterns/
-│   ├── singleton/
-│   ├── factory/
-│   ├── builder/
-│   └── prototype/
+│   ├── abstract-factory-pattern.js
+│   ├── class-design-pattern.js
+│   ├── constructor-pattern.js
+│   ├── factory-pattern.js
+│   └── singleton-pattern.js
 ├── structural-patterns/
-│   ├── adapter/
-│   ├── decorator/
-│   ├── facade/
-│   └── proxy/
-└── index.js   # Entry point — runs all pattern demos
+│   ├── mixin-pattern.js
+│   ├── module-pattern.js
+│   └── other-patterns.js
+└── index.js   # Entry point
 ```

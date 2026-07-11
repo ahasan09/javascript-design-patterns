@@ -1,14 +1,14 @@
 {
-  "name": "crm",
+  "name": "javascript-design-patterns",
   "version": "1.0.0",
-  "description": "",
+  "description": "Classic design patterns implemented in modern JavaScript (ES modules)",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js -e js"
   },
-  "author": "Emmanuel Henri",
+  "author": "Abul Hasan",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
